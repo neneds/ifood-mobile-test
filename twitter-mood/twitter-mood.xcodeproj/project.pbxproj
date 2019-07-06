@@ -15,6 +15,15 @@
 		E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6311E1522D13AFF00E9F60D /* LaunchScreen.storyboard */; };
 		E6311E2222D13AFF00E9F60D /* twitter_moodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6311E2122D13AFF00E9F60D /* twitter_moodTests.swift */; };
 		E6311E2D22D13AFF00E9F60D /* twitter_moodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6311E2C22D13AFF00E9F60D /* twitter_moodUITests.swift */; };
+		E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB2D22D13F50005FCEC2 /* UIKit.swift */; };
+		E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */; };
+		E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */; };
+		E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */; };
+		E6EBE87022D147AA008EA586 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE86F22D147AA008EA586 /* Router.swift */; };
+		E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */; };
+		E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */; };
+		E6EBE87622D14A71008EA586 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87522D14A71008EA586 /* BaseViewController.swift */; };
+		E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87822D14B15008EA586 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,15 @@
 		E6311E2822D13AFF00E9F60D /* twitter-moodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "twitter-moodUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6311E2C22D13AFF00E9F60D /* twitter_moodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitter_moodUITests.swift; sourceTree = "<group>"; };
 		E6311E2E22D13AFF00E9F60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E644BB2D22D13F50005FCEC2 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		E6EBE86F22D147AA008EA586 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalizable.swift; sourceTree = "<group>"; };
+		E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
+		E6EBE87522D14A71008EA586 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E6EBE87822D14B15008EA586 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		EA26E7F02E4F786F4597D5D3 /* Pods-twitter-moodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-moodTests.release.xcconfig"; path = "Target Support Files/Pods-twitter-moodTests/Pods-twitter-moodTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC980CABC9A6E740A45E7B42 /* Pods_twitter_mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,7 +123,6 @@
 				CB04D597BF2B988D30B10FBD /* Pods-twitter-moodUITests.debug.xcconfig */,
 				9DF56E20E280E9F1D08FC799 /* Pods-twitter-moodUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -161,6 +178,7 @@
 		E6311E3A22D13B0C00E9F60D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E644BB2C22D13F14005FCEC2 /* UIKit */,
 				E6311E1322D13AFF00E9F60D /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -169,6 +187,9 @@
 		E6311E3B22D13B1300E9F60D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E6EBE86E22D1479F008EA586 /* Classes */,
+				E644BB3422D14359005FCEC2 /* BaseClasses */,
+				E644BB2F22D141AE005FCEC2 /* Extensions */,
 				E6311E3C22D13B1D00E9F60D /* SupportFiles */,
 			);
 			path = Sources;
@@ -182,6 +203,43 @@
 				E6311E0C22D13AFE00E9F60D /* AppDelegate.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		E644BB2C22D13F14005FCEC2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E644BB2D22D13F50005FCEC2 /* UIKit.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E644BB2F22D141AE005FCEC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */,
+				E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E644BB3422D14359005FCEC2 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */,
+				E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */,
+				E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */,
+				E6EBE87522D14A71008EA586 /* BaseViewController.swift */,
+				E6EBE87822D14B15008EA586 /* BaseViewModel.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		E6EBE86E22D1479F008EA586 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E6EBE86F22D147AA008EA586 /* Router.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +504,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */,
+				E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */,
+				E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */,
+				E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */,
+				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
+				E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */,
+				E6EBE87622D14A71008EA586 /* BaseViewController.swift in Sources */,
+				E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */,
+				E6EBE87022D147AA008EA586 /* Router.swift in Sources */,
 				E6311E0D22D13AFE00E9F60D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
