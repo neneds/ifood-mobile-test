@@ -1,5 +1,5 @@
 //
-//  TwitterResponse.swift
+//  Tweet.swift
 //  twitter-mood
 //
 //  Created by Dennis Merli on 7/6/19.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-// MARK: - TwitterResponseElement
-class TwitterResponseElement: Codable {
+class Tweet: Codable {
     var createdAt: String?
     var id: Double?
     var idStr: String?

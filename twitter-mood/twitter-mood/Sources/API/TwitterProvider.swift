@@ -15,7 +15,7 @@ enum TwitterProvider {
 
 extension TwitterProvider: TargetType {
     var baseURL: URL {
-        return NetworkManager.shared.currentBaseURL()
+        return URL(string: "https://api.twitter.com")!
     }
     
     var path: String {

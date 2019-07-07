@@ -117,6 +117,9 @@ class BaseLocalizable: NSObject {
                                                              bundle: Bundle.main,
                                                              value: "Nothing to show",
                                                              comment: "Nothing to show")
+    static func nilParameter(_ parameter: String) -> String {
+        return String.localizedStringWithFormat(NSLocalizedString("The parameter: %@ is null", comment: "message for when a parameter is null"), parameter)
+    }
     
 }
 
