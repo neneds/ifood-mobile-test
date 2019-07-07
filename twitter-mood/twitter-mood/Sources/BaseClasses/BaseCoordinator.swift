@@ -27,7 +27,7 @@ protocol DependencyCoordinatorType: CoordinatorType {
 /// CoordinatorType and DependencyCoordinatorType
 typealias DependencyAndCoordinatable = CoordinatorType & DependencyCoordinatorType
 
-class BaseCoordinator: CoordinatorType {
+class BaseCoordinator: DependencyAndCoordinatable {
     
     init(window: UIWindow?, parentCoordinator: BaseCoordinator?) {
         self.parentCoordinator = parentCoordinator
@@ -38,6 +38,8 @@ class BaseCoordinator: CoordinatorType {
     }
     
     var disposeBag: DisposeBag = DisposeBag()
+    
+    var childCoordinators: [CoordinatorType] = []
     
     var parentCoordinator: BaseCoordinator?
     
@@ -55,7 +57,7 @@ class BaseCoordinator: CoordinatorType {
     }
 }
 
-fileprivate extension CoordinatorType where Self: BaseCoordinator, Self: DependencyCoordinatorType {
+extension BaseCoordinator  {
     
     func coordinateTo(coordinator: CoordinatorType?) {
         guard let coordinator = coordinator else { return }
