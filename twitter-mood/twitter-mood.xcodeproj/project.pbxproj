@@ -15,10 +15,12 @@
 		E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6311E1522D13AFF00E9F60D /* LaunchScreen.storyboard */; };
 		E6311E2222D13AFF00E9F60D /* twitter_moodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6311E2122D13AFF00E9F60D /* twitter_moodTests.swift */; };
 		E6311E2D22D13AFF00E9F60D /* twitter_moodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6311E2C22D13AFF00E9F60D /* twitter_moodUITests.swift */; };
+		E638D1E822D17C4500F965EA /* TwitterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E638D1E722D17C4500F965EA /* TwitterProvider.swift */; };
 		E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB2D22D13F50005FCEC2 /* UIKit.swift */; };
 		E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */; };
 		E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */; };
 		E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */; };
+		E65369BC22D1838D009E75F1 /* TwitterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369BB22D1838D009E75F1 /* TwitterResponse.swift */; };
 		E6EBE87022D147AA008EA586 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE86F22D147AA008EA586 /* Router.swift */; };
 		E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */; };
 		E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */; };
@@ -62,10 +64,12 @@
 		E6311E2822D13AFF00E9F60D /* twitter-moodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "twitter-moodUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6311E2C22D13AFF00E9F60D /* twitter_moodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitter_moodUITests.swift; sourceTree = "<group>"; };
 		E6311E2E22D13AFF00E9F60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E638D1E722D17C4500F965EA /* TwitterProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterProvider.swift; sourceTree = "<group>"; };
 		E644BB2D22D13F50005FCEC2 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
 		E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		E65369BB22D1838D009E75F1 /* TwitterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterResponse.swift; sourceTree = "<group>"; };
 		E6EBE86F22D147AA008EA586 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalizable.swift; sourceTree = "<group>"; };
 		E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -187,6 +191,9 @@
 		E6311E3B22D13B1300E9F60D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E65369BA22D18379009E75F1 /* Model */,
+				E638D1E622D17C3600F965EA /* API */,
+				E638D1E522D17C2900F965EA /* Service */,
 				E6EBE86E22D1479F008EA586 /* Classes */,
 				E644BB3422D14359005FCEC2 /* BaseClasses */,
 				E644BB2F22D141AE005FCEC2 /* Extensions */,
@@ -203,6 +210,21 @@
 				E6311E0C22D13AFE00E9F60D /* AppDelegate.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		E638D1E522D17C2900F965EA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E638D1E622D17C3600F965EA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E638D1E722D17C4500F965EA /* TwitterProvider.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E644BB2C22D13F14005FCEC2 /* UIKit */ = {
@@ -232,6 +254,14 @@
 				E6EBE87822D14B15008EA586 /* BaseViewModel.swift */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		E65369BA22D18379009E75F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E65369BB22D1838D009E75F1 /* TwitterResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E6EBE86E22D1479F008EA586 /* Classes */ = {
@@ -504,11 +534,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E638D1E822D17C4500F965EA /* TwitterProvider.swift in Sources */,
 				E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */,
 				E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */,
 				E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */,
 				E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */,
 				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
+				E65369BC22D1838D009E75F1 /* TwitterResponse.swift in Sources */,
 				E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */,
 				E6EBE87622D14A71008EA586 /* BaseViewController.swift in Sources */,
 				E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */,
