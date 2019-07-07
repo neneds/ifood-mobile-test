@@ -28,6 +28,7 @@
 		E65369CA22D194AB009E75F1 /* NetworkOperationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369C922D194AB009E75F1 /* NetworkOperationMode.swift */; };
 		E65369CC22D195D4009E75F1 /* StubResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CB22D195D4009E75F1 /* StubResponseManager.swift */; };
 		E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CD22D195FE009E75F1 /* ProjectUtils.swift */; };
+		E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */; };
 		E6EBE87022D147AA008EA586 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE86F22D147AA008EA586 /* Router.swift */; };
 		E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */; };
 		E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */; };
@@ -102,6 +103,7 @@
 		E65369C922D194AB009E75F1 /* NetworkOperationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperationMode.swift; sourceTree = "<group>"; };
 		E65369CB22D195D4009E75F1 /* StubResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponseManager.swift; sourceTree = "<group>"; };
 		E65369CD22D195FE009E75F1 /* ProjectUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUtils.swift; sourceTree = "<group>"; };
+		E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserLookupLocalizable.swift; sourceTree = "<group>"; };
 		E6EBE86F22D147AA008EA586 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalizable.swift; sourceTree = "<group>"; };
 		E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		E6311E3B22D13B1300E9F60D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E6BED3A522D27D9300F95BA6 /* Localizable */,
 				E65369C522D1936A009E75F1 /* Helpers */,
 				E65369BD22D18957009E75F1 /* Flows */,
 				E65369BA22D18379009E75F1 /* Model */,
@@ -359,6 +362,14 @@
 				E65369CB22D195D4009E75F1 /* StubResponseManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E6BED3A522D27D9300F95BA6 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		E6EBE86E22D1479F008EA586 /* Classes */ = {
@@ -785,6 +796,7 @@
 				E65369C122D1897B009E75F1 /* UserTweetsViewController.swift in Sources */,
 				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
 				E6FD5DF322D2720600193849 /* UserTweetsViewModel.swift in Sources */,
+				E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */,
 				E6FD5DF622D2722500193849 /* UserTweetsCoordinator.swift in Sources */,
 				E65369BC22D1838D009E75F1 /* Tweet.swift in Sources */,
 				E6FD5DDB22D2404200193849 /* PlistLoader.swift in Sources */,

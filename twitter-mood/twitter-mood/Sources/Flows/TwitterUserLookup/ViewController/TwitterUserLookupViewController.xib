@@ -6,12 +6,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwitterUserLookupViewController" customModule="twitter_mood" customModuleProvider="target">
             <connections>
+                <outlet property="buttonSeeTweets" destination="VeI-Ec-2B1" id="n1c-vx-zAe"/>
+                <outlet property="labelTwitterUserTitle" destination="2QC-lL-frJ" id="mGj-bP-FGm"/>
+                <outlet property="textFieldInput" destination="uxm-nh-0WQ" id="Trq-7E-kei"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,29 +24,30 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="s96-Ot-h2p">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="s96-Ot-h2p">
                     <rect key="frame" x="25" y="94" width="364" height="136"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2QC-lL-frJ">
-                            <rect key="frame" x="135.5" y="0.0" width="93.5" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-nh-0WQ">
-                            <rect key="frame" x="169.5" y="53" width="25" height="30"/>
+                            <rect key="frame" x="0.0" y="53" width="364" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeI-Ec-2B1">
-                            <rect key="frame" x="159" y="106" width="46" height="30"/>
+                            <rect key="frame" x="0.0" y="106" width="364" height="30"/>
+                            <color key="backgroundColor" name="grey323232"/>
                             <state key="normal" title="Button"/>
                         </button>
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="grey1B1B1B"/>
             <constraints>
                 <constraint firstItem="s96-Ot-h2p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="hhL-7d-Gbn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s96-Ot-h2p" secondAttribute="trailing" constant="25" id="icc-hi-9Oh"/>
@@ -52,4 +57,12 @@
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="grey1B1B1B">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="grey323232">
+            <color red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
