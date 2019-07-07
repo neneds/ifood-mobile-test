@@ -37,6 +37,9 @@
 		E6FD5DD822D23DF500193849 /* CustomError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DD722D23DF500193849 /* CustomError+Extensions.swift */; };
 		E6FD5DDB22D2404200193849 /* PlistLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DDA22D2404200193849 /* PlistLoader.swift */; };
 		E6FD5DDD22D241FA00193849 /* EnvironmentVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DDC22D241FA00193849 /* EnvironmentVariables.swift */; };
+		E6FD5DDF22D24D1100193849 /* Variables.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6FD5DDE22D24D1100193849 /* Variables.plist */; };
+		E6FD5DE122D266CC00193849 /* GoogleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DE022D266CC00193849 /* GoogleProvider.swift */; };
+		E6FD5DE322D26A6000193849 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DE222D26A6000193849 /* GoogleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		E6FD5DD722D23DF500193849 /* CustomError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomError+Extensions.swift"; sourceTree = "<group>"; };
 		E6FD5DDA22D2404200193849 /* PlistLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistLoader.swift; sourceTree = "<group>"; };
 		E6FD5DDC22D241FA00193849 /* EnvironmentVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVariables.swift; sourceTree = "<group>"; };
+		E6FD5DDE22D24D1100193849 /* Variables.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Variables.plist; sourceTree = "<group>"; };
+		E6FD5DE022D266CC00193849 /* GoogleProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleProvider.swift; sourceTree = "<group>"; };
+		E6FD5DE222D26A6000193849 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		EA26E7F02E4F786F4597D5D3 /* Pods-twitter-moodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-moodTests.release.xcconfig"; path = "Target Support Files/Pods-twitter-moodTests/Pods-twitter-moodTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC980CABC9A6E740A45E7B42 /* Pods_twitter_mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twitter_mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -239,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E65369C322D18F9C009E75F1 /* TwitterService.swift */,
+				E6FD5DE222D26A6000193849 /* GoogleService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				E638D1E722D17C4500F965EA /* TwitterProvider.swift */,
+				E6FD5DE022D266CC00193849 /* GoogleProvider.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 		E6FD5DD922D2403300193849 /* EnvVars */ = {
 			isa = PBXGroup;
 			children = (
+				E6FD5DDE22D24D1100193849 /* Variables.plist */,
 				E6FD5DDA22D2404200193849 /* PlistLoader.swift */,
 				E6FD5DDC22D241FA00193849 /* EnvironmentVariables.swift */,
 			);
@@ -464,6 +473,7 @@
 			files = (
 				E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */,
 				E6311E1422D13AFF00E9F60D /* Assets.xcassets in Resources */,
+				E6FD5DDF22D24D1100193849 /* Variables.plist in Resources */,
 				E65369C222D1897B009E75F1 /* UserTweetsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +632,7 @@
 				E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */,
 				E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */,
 				E6FD5DDD22D241FA00193849 /* EnvironmentVariables.swift in Sources */,
+				E6FD5DE122D266CC00193849 /* GoogleProvider.swift in Sources */,
 				E6FD5DD822D23DF500193849 /* CustomError+Extensions.swift in Sources */,
 				E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */,
 				E65369CA22D194AB009E75F1 /* NetworkOperationMode.swift in Sources */,
@@ -635,6 +646,7 @@
 				E6EBE87622D14A71008EA586 /* BaseViewController.swift in Sources */,
 				E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */,
 				E65369C822D193C1009E75F1 /* NetworkManager.swift in Sources */,
+				E6FD5DE322D26A6000193849 /* GoogleService.swift in Sources */,
 				E65369CC22D195D4009E75F1 /* StubResponseManager.swift in Sources */,
 				E6EBE87022D147AA008EA586 /* Router.swift in Sources */,
 				E6311E0D22D13AFE00E9F60D /* AppDelegate.swift in Sources */,

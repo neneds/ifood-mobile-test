@@ -15,13 +15,13 @@ enum TwitterProvider {
 
 extension TwitterProvider: TargetType {
     var baseURL: URL {
-        return URL(string: "https://api.twitter.com")!
+        return NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.baseURL! ?? URL(string: "")!
     }
     
     var path: String {
         switch self {
         case .fetchTweets(username: _, count: _):
-            return "/1.1/statuses/user_timeline.json"
+            return "/statuses/user_timeline.json"
         case .authorize:
             return "oauth2/token"
         }
