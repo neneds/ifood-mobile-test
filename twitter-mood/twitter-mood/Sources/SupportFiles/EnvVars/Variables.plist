@@ -14,9 +14,9 @@
 	<key>apiVariablesGoogle</key>
 	<dict>
 		<key>domain</key>
-		<string>google.com</string>
+		<string>https://language.googleapis.com</string>
 		<key>apiKey</key>
-		<string></string>
+		<string>AIzaSyDmSGl5wSb-3hwsigI94FS6JWdXcqBFKRM</string>
 		<key>apiVersion</key>
 		<string>v1</string>
 	</dict>
