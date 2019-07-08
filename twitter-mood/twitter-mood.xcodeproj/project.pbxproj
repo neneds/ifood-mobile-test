@@ -29,6 +29,8 @@
 		E65369CC22D195D4009E75F1 /* StubResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CB22D195D4009E75F1 /* StubResponseManager.swift */; };
 		E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CD22D195FE009E75F1 /* ProjectUtils.swift */; };
 		E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */; };
+		E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */; };
+		E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */; };
 		E6EBE87022D147AA008EA586 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE86F22D147AA008EA586 /* Router.swift */; };
 		E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */; };
 		E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */; };
@@ -44,7 +46,6 @@
 		E6FD5DE522D26EC100193849 /* TweetMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DE422D26EC100193849 /* TweetMood.swift */; };
 		E6FD5DEA22D2713E00193849 /* TwitterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DE922D2713E00193849 /* TwitterDetailViewModel.swift */; };
 		E6FD5DED22D2718800193849 /* TweetDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DEC22D2718800193849 /* TweetDetailCoordinator.swift */; };
-		E6FD5DEF22D271D100193849 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DEE22D271D100193849 /* TweetDetailViewController.swift */; };
 		E6FD5DF322D2720600193849 /* UserTweetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DF222D2720600193849 /* UserTweetsViewModel.swift */; };
 		E6FD5DF622D2722500193849 /* UserTweetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DF522D2722500193849 /* UserTweetsCoordinator.swift */; };
 		E6FD5DFA22D2737700193849 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FD5DF922D2737700193849 /* AppCoordinator.swift */; };
@@ -104,6 +105,8 @@
 		E65369CB22D195D4009E75F1 /* StubResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponseManager.swift; sourceTree = "<group>"; };
 		E65369CD22D195FE009E75F1 /* ProjectUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUtils.swift; sourceTree = "<group>"; };
 		E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserLookupLocalizable.swift; sourceTree = "<group>"; };
+		E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
+		E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetDetailViewController.xib; sourceTree = "<group>"; };
 		E6EBE86F22D147AA008EA586 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalizable.swift; sourceTree = "<group>"; };
 		E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -119,7 +122,6 @@
 		E6FD5DE422D26EC100193849 /* TweetMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMood.swift; sourceTree = "<group>"; };
 		E6FD5DE922D2713E00193849 /* TwitterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDetailViewModel.swift; sourceTree = "<group>"; };
 		E6FD5DEC22D2718800193849 /* TweetDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailCoordinator.swift; sourceTree = "<group>"; };
-		E6FD5DEE22D271D100193849 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		E6FD5DF222D2720600193849 /* UserTweetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModel.swift; sourceTree = "<group>"; };
 		E6FD5DF522D2722500193849 /* UserTweetsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsCoordinator.swift; sourceTree = "<group>"; };
 		E6FD5DF922D2737700193849 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -413,7 +415,8 @@
 		E6FD5DE722D2712600193849 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E6FD5DEE22D271D100193849 /* TweetDetailViewController.swift */,
+				E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */,
+				E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FD5E0322D2763500193849 /* TwitterUserLookupViewController.xib in Resources */,
+				E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */,
 				E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */,
 				E6311E1422D13AFF00E9F60D /* Assets.xcassets in Resources */,
 				E6FD5DDF22D24D1100193849 /* Variables.plist in Resources */,
@@ -783,7 +787,6 @@
 				E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */,
 				E6FD5DFA22D2737700193849 /* AppCoordinator.swift in Sources */,
 				E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */,
-				E6FD5DEF22D271D100193849 /* TweetDetailViewController.swift in Sources */,
 				E6FD5DDD22D241FA00193849 /* EnvironmentVariables.swift in Sources */,
 				E6FD5DE122D266CC00193849 /* GoogleProvider.swift in Sources */,
 				E6FD5DD822D23DF500193849 /* CustomError+Extensions.swift in Sources */,
@@ -795,6 +798,7 @@
 				E6FD5DED22D2718800193849 /* TweetDetailCoordinator.swift in Sources */,
 				E65369C122D1897B009E75F1 /* UserTweetsViewController.swift in Sources */,
 				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
+				E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */,
 				E6FD5DF322D2720600193849 /* UserTweetsViewModel.swift in Sources */,
 				E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */,
 				E6FD5DF622D2722500193849 /* UserTweetsCoordinator.swift in Sources */,
