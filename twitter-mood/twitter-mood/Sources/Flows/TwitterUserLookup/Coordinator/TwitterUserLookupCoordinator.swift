@@ -11,7 +11,9 @@ import UIKit
 class TwitterUserLookupCoordinator: BaseCoordinator {
     
     private var window: UIWindow!
-    var userLookupViewController: TwitterUserLookupViewController!
+    private var userLookupViewController: TwitterUserLookupViewController!
+    private var navigationController: UINavigationController?
+    
     
     override init(window: UIWindow?, parentCoordinator: BaseCoordinator?) {
         super.init(window: window, parentCoordinator: parentCoordinator)
@@ -23,8 +25,8 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     
     override func start() {
         userLookupViewController = TwitterUserLookupViewController(viewModel: TwitterUserLookupViewModel(), nibName: "TwitterUserLookupViewController")
-
-        window.rootViewController = userLookupViewController
+        navigationController = UINavigationController(rootViewController: userLookupViewController)
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
     }

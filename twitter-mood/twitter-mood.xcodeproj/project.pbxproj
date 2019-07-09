@@ -28,6 +28,8 @@
 		E65369CA22D194AB009E75F1 /* NetworkOperationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369C922D194AB009E75F1 /* NetworkOperationMode.swift */; };
 		E65369CC22D195D4009E75F1 /* StubResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CB22D195D4009E75F1 /* StubResponseManager.swift */; };
 		E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CD22D195FE009E75F1 /* ProjectUtils.swift */; };
+		E69780DA22D425350075A08C /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69780D822D425350075A08C /* TweetTableViewCell.swift */; };
+		E69780DB22D425350075A08C /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69780D922D425350075A08C /* TweetTableViewCell.xib */; };
 		E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */; };
 		E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */; };
 		E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */; };
@@ -104,6 +106,8 @@
 		E65369C922D194AB009E75F1 /* NetworkOperationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperationMode.swift; sourceTree = "<group>"; };
 		E65369CB22D195D4009E75F1 /* StubResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubResponseManager.swift; sourceTree = "<group>"; };
 		E65369CD22D195FE009E75F1 /* ProjectUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUtils.swift; sourceTree = "<group>"; };
+		E69780D822D425350075A08C /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		E69780D922D425350075A08C /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserLookupLocalizable.swift; sourceTree = "<group>"; };
 		E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetDetailViewController.xib; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 		E6311E3A22D13B0C00E9F60D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E69780D722D424FE0075A08C /* Cell */,
 				E644BB2C22D13F14005FCEC2 /* UIKit */,
 				E6311E1322D13AFF00E9F60D /* Assets.xcassets */,
 			);
@@ -364,6 +369,15 @@
 				E65369CB22D195D4009E75F1 /* StubResponseManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E69780D722D424FE0075A08C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E69780D822D425350075A08C /* TweetTableViewCell.swift */,
+				E69780D922D425350075A08C /* TweetTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		E6BED3A522D27D9300F95BA6 /* Localizable */ = {
@@ -624,6 +638,7 @@
 			files = (
 				E6FD5E0322D2763500193849 /* TwitterUserLookupViewController.xib in Resources */,
 				E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */,
+				E69780DB22D425350075A08C /* TweetTableViewCell.xib in Resources */,
 				E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */,
 				E6311E1422D13AFF00E9F60D /* Assets.xcassets in Resources */,
 				E6FD5DDF22D24D1100193849 /* Variables.plist in Resources */,
@@ -790,6 +805,7 @@
 				E6FD5DDD22D241FA00193849 /* EnvironmentVariables.swift in Sources */,
 				E6FD5DE122D266CC00193849 /* GoogleProvider.swift in Sources */,
 				E6FD5DD822D23DF500193849 /* CustomError+Extensions.swift in Sources */,
+				E69780DA22D425350075A08C /* TweetTableViewCell.swift in Sources */,
 				E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */,
 				E65369CA22D194AB009E75F1 /* NetworkOperationMode.swift in Sources */,
 				E6FD5DD622D23D2800193849 /* CustomError.swift in Sources */,

@@ -13,7 +13,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetDetailViewController" customModule="twitter_mood" customModuleProvider="target">
             <connections>
+                <outlet property="labelMood" destination="4c8-gY-OKA" id="N6n-md-iQQ"/>
+                <outlet property="labelMoodName" destination="Cxb-Ry-dww" id="jeA-Vw-Xu9"/>
+                <outlet property="labelMoodTitle" destination="pEs-Si-9go" id="YKZ-dt-yOK"/>
+                <outlet property="textViewTweet" destination="Pzl-sE-Hsj" id="3HZ-9p-pPq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMoodBg" destination="XvI-rS-Aj5" id="iq0-dv-Iou"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -41,7 +46,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEs-Si-9go">
                                     <rect key="frame" x="166" y="0.0" width="42" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvI-rS-Aj5">
