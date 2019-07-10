@@ -16,6 +16,7 @@ class TwitterUserLookupViewModel: BaseViewModel {
     
     let userNameValidated: Driver<Bool>
     var userNameInput: BehaviorSubject = BehaviorSubject<String>(value: "")
+    private(set) var errorObservable = PublishSubject<Error?>()
     private(set) var isLoading: BehaviorSubject = BehaviorSubject<Bool>(value: false)
     
     init(twitterService: TwitterServiceType) {
@@ -37,6 +38,7 @@ class TwitterUserLookupViewModel: BaseViewModel {
                 self?.handleTwitterTokenStore(token)
             }) { (error) in
                 self.isLoading.onNext(false)
+                self.errorObservable.onNext(error)
                 print("error on request twitter auth token: \(error)")
             }
         }
@@ -48,6 +50,7 @@ class TwitterUserLookupViewModel: BaseViewModel {
             let accessToken = AccessToken(tokenType: .other, accessToken: token.accessToken ?? "", scope: nil, refreshToken: nil)
             try tokenService.saveAccessToken(accessToken)
         } catch {
+            self.errorObservable.onNext(error)
             print("error on store token: \(error.localizedDescription)")
         }
     }

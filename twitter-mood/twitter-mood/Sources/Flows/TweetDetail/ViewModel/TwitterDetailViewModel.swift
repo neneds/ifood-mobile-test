@@ -16,4 +16,6 @@ class TwitterDetailViewModel: BaseViewModel {
         self.currentTweet = tweet
         self.googleService = googleService
     }
+    
+    
 }

@@ -9,16 +9,28 @@
 import UIKit
 import RxSwift
 
-class UserTweetsViewController: BaseViewController {
+class UserTweetsViewController: BaseViewController, BindableType {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var labelUsername: UILabel!
     @IBOutlet private weak var imageViewUser: UIImageView!
     
+    internal var viewModel: UserTweetsViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
+    }
+    
+    override func setViewModel(viewModel: Any) {
+        guard let viewModel = viewModel as? UserTweetsViewModel else {
+            fatalError("viewmodel of unexpected type")
+        }
+        self.viewModel = viewModel
+    }
+    
+    func bindViewModel() {
+        self.title = viewModel.username
     }
 
 }

@@ -10,4 +10,11 @@ import Foundation
 
 class UserTweetsViewModel: BaseViewModel {
     
+    private var twitterService: TwitterServiceType
+    private(set) var username: String
+    
+    init(username: String, twitterService: TwitterServiceType) {
+        self.username = username
+        self.twitterService = twitterService
+    }
 }

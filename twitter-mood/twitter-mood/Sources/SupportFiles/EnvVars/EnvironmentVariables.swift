@@ -21,9 +21,9 @@ class APIEnvironmentVariables: Codable {
     
     var baseURL: URL? {
         guard var domain = domain else { return nil }
-//        if let unwrappedAPIVersion = apiVersion {
-//            domain.append("/\(unwrappedAPIVersion)")
-//        }
+        if let unwrappedAPIVersion = apiVersion {
+            domain.append("/\(unwrappedAPIVersion)")
+        }
         return URL(string: domain)
     }
 }

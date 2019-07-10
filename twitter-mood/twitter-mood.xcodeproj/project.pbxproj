@@ -40,6 +40,9 @@
 		E6CD4AA522D5709B0004DA37 /* ValidationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AA422D5709B0004DA37 /* ValidationResult.swift */; };
 		E6CD4AA722D570D00004DA37 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AA622D570D00004DA37 /* InputValidator.swift */; };
 		E6CD4AAA22D571AA0004DA37 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AA922D571AA0004DA37 /* BindableType.swift */; };
+		E6CD4AAD22D5770B0004DA37 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AAC22D5770B0004DA37 /* CustomNavigationController.swift */; };
+		E6CD4AAF22D579D50004DA37 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AAE22D579D50004DA37 /* UIViewController+Extensions.swift */; };
+		E6CD4AB122D580010004DA37 /* Type+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CD4AB022D580010004DA37 /* Type+Extensions.swift */; };
 		E6EBE87022D147AA008EA586 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE86F22D147AA008EA586 /* Router.swift */; };
 		E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */; };
 		E6EBE87422D14A17008EA586 /* BaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */; };
@@ -125,6 +128,9 @@
 		E6CD4AA422D5709B0004DA37 /* ValidationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResult.swift; sourceTree = "<group>"; };
 		E6CD4AA622D570D00004DA37 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		E6CD4AA922D571AA0004DA37 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
+		E6CD4AAC22D5770B0004DA37 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		E6CD4AAE22D579D50004DA37 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E6CD4AB022D580010004DA37 /* Type+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Type+Extensions.swift"; sourceTree = "<group>"; };
 		E6EBE86F22D147AA008EA586 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E6EBE87122D149C9008EA586 /* BaseLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalizable.swift; sourceTree = "<group>"; };
 		E6EBE87322D14A17008EA586 /* BaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkService.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 		E6311E3A22D13B0C00E9F60D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E6CD4AAB22D576F50004DA37 /* NavigationController */,
 				E69780D722D424FE0075A08C /* Cell */,
 				E644BB2C22D13F14005FCEC2 /* UIKit */,
 				E6311E1322D13AFF00E9F60D /* Assets.xcassets */,
@@ -320,6 +327,8 @@
 			children = (
 				E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */,
 				E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */,
+				E6CD4AAE22D579D50004DA37 /* UIViewController+Extensions.swift */,
+				E6CD4AB022D580010004DA37 /* Type+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +431,14 @@
 				E6CD4AA922D571AA0004DA37 /* BindableType.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E6CD4AAB22D576F50004DA37 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E6CD4AAC22D5770B0004DA37 /* CustomNavigationController.swift */,
+			);
+			path = NavigationController;
 			sourceTree = "<group>";
 		};
 		E6EBE86E22D1479F008EA586 /* Classes */ = {
@@ -833,6 +850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6CD4AAD22D5770B0004DA37 /* CustomNavigationController.swift in Sources */,
 				E6FD5E0622D2764500193849 /* TwitterUserLookupViewModel.swift in Sources */,
 				E638D1E822D17C4500F965EA /* TwitterProvider.swift in Sources */,
 				E6FD5DFE22D2760300193849 /* TwitterUserLookupCoordinator.swift in Sources */,
@@ -854,10 +872,12 @@
 				E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */,
 				E6FD5E0222D2763500193849 /* TwitterUserLookupViewController.swift in Sources */,
 				E6FD5DED22D2718800193849 /* TweetDetailCoordinator.swift in Sources */,
+				E6CD4AAF22D579D50004DA37 /* UIViewController+Extensions.swift in Sources */,
 				E65369C122D1897B009E75F1 /* UserTweetsViewController.swift in Sources */,
 				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
 				E6CD4A9E22D560890004DA37 /* AccessTokenService.swift in Sources */,
 				E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */,
+				E6CD4AB122D580010004DA37 /* Type+Extensions.swift in Sources */,
 				E6FD5DF322D2720600193849 /* UserTweetsViewModel.swift in Sources */,
 				E6CD4AA722D570D00004DA37 /* InputValidator.swift in Sources */,
 				E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */,

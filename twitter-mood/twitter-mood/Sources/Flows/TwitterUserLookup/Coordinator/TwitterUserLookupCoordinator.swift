@@ -13,6 +13,7 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     private var window: UIWindow!
     private var userLookupViewController: TwitterUserLookupViewController!
     private var navigationController: UINavigationController?
+    private var userLookupViewModel: TwitterUserLookupViewModel?
     
     
     override init(window: UIWindow?, parentCoordinator: BaseCoordinator?) {
@@ -24,10 +25,21 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        userLookupViewController = TwitterUserLookupViewController(viewModel: TwitterUserLookupViewModel(twitterService: TwitterService()), nibName: "TwitterUserLookupViewController")
-        navigationController = UINavigationController(rootViewController: userLookupViewController)
+        userLookupViewModel = TwitterUserLookupViewModel(twitterService: TwitterService())
+        userLookupViewController = TwitterUserLookupViewController(viewModel: userLookupViewModel as Any, nibName: TwitterUserLookupViewController.typeName)
+        navigationController = CustomNavigationController(rootViewController: userLookupViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
+        userLookupViewController.seeTweetsAction.subscribe(onNext: { (_) in
+            self.handleSeeUserTweets(username: try? self.userLookupViewModel?.userNameInput.value())
+        }).disposed(by: disposeBag)
+        
+    }
+    
+    private func handleSeeUserTweets(username: String?) {
+        guard let username = username else { return }
+        let userTweetsCoordinator = UserTweetsCoordinator(username: username, rootViewControler: navigationController, parentCoordinator: self)
+        userTweetsCoordinator.start(presentationType: .push)
     }
 }
