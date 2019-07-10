@@ -32,4 +32,9 @@ final class ProjectUtils {
     class func isRunningTests() -> Bool {
         return isRunningUITests() || isRunningUnitTests()
     }
+    
+    class func keychainGroupName() -> String {
+        guard let bundleId = Bundle.main.bundleIdentifier else { return "" }
+        return bundleId
+    }
 }

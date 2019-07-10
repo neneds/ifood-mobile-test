@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - KeychainAccess (3.2.0)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -19,6 +20,7 @@ PODS:
   - SDWebImage/Core (5.0.6)
 
 DEPENDENCIES:
+  - KeychainAccess
   - Moya/RxSwift
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - KeychainAccess
     - Moya
     - Result
     - RxBlocking
@@ -39,6 +42,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
@@ -47,6 +51,6 @@ SPEC CHECKSUMS:
   RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
 
-PODFILE CHECKSUM: f197e67757cb3046e2133bf7cb57acc429abd552
+PODFILE CHECKSUM: 7f809695509ba142ed99bba56a79fbaeae7bee3f
 
 COCOAPODS: 1.6.1

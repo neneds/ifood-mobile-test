@@ -24,7 +24,7 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        userLookupViewController = TwitterUserLookupViewController(viewModel: TwitterUserLookupViewModel(), nibName: "TwitterUserLookupViewController")
+        userLookupViewController = TwitterUserLookupViewController(viewModel: TwitterUserLookupViewModel(twitterService: TwitterService()), nibName: "TwitterUserLookupViewController")
         navigationController = UINavigationController(rootViewController: userLookupViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

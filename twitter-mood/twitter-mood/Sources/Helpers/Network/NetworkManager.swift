@@ -50,4 +50,16 @@ final class NetworkManager {
     func handleMoyaError(_ error: Error, response: Moya.Response) -> Error {
         return CustomError.errorFromService(with: response)
     }
+    
+    func twitterAuthToken() -> String? {
+       let accessTokenService = AccessTokenService(keychainService: KeychainService(service: ProjectUtils.keychainGroupName()))
+        do {
+            guard let accessToken = try accessTokenService.loadAccessToken() else {
+                return nil
+            }
+            return accessToken.accessToken
+        } catch {
+            return nil
+        }
+    }
 }

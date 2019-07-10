@@ -12,7 +12,7 @@ import Moya
 
 protocol TwitterServiceType {
     func fetchTweets(username: String, count: Int) -> Single<[Tweet]>
-    func authorize() 
+    func authorize() -> Single<TwitterTokenResponse>
 }
 
 final class TwitterService: BaseNetworkService<TwitterProvider>, TwitterServiceType {
@@ -30,8 +30,18 @@ final class TwitterService: BaseNetworkService<TwitterProvider>, TwitterServiceT
             })
     }
     
-    func authorize() {
-        
+    func authorize() -> Single<TwitterTokenResponse> {
+        return provider.rx
+            .request(.authorize)
+            .flatMap({ (response) -> Single<TwitterTokenResponse> in
+                do {
+                    try _ = response.filterSuccessfulStatusCodes()
+                    let token = try JSONDecoder().decode(TwitterTokenResponse.self, from: response.data)
+                    return Single.just(token)
+                } catch {
+                    return Single.error(NetworkManager.shared.handleMoyaError(error, response: response))
+                }
+            })
     }
     
     

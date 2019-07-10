@@ -49,16 +49,33 @@ extension TwitterProvider: TargetType {
         switch self {
         case .fetchTweets(let username, let count):
             let parameters = ["screen_name": username, "count": count] as [String : Any]
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .authorize:
-            return .requestPlain
+            let parameters = ["grant_type": "client_credentials"]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
     }
     
     var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        switch self {
+        case .fetchTweets(username: _, count: _):
+            return ["Content-type": "application/json", "Authorization": "Bearer \(NetworkManager.shared.twitterAuthToken() ?? "")"]
+        case .authorize:
+            return ["Content-type": "application/x-www-form-urlencoded;charset=UTF-8", "Authorization": "Basic \(NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.apiKey ?? "")"]
+        }
+     
     }
 }
 
+extension TwitterProvider: AccessTokenAuthorizable {
+    var authorizationType: AuthorizationType {
+        switch self {
+        case .fetchTweets(username: _, count: _):
+            return .bearer
+        case .authorize:
+            return .basic
+        }
+    }
+}
 
 

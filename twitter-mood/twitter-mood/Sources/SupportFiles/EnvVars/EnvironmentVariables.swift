@@ -12,10 +12,6 @@ final class EnvironmentVariables: Codable {
     let apiVariablesTwitter: APIEnvironmentVariables?
     let apiVariablesGoogle: APIEnvironmentVariables?
     
-    init(apiVariablesTwitter: APIEnvironmentVariables?, apiVariablesGoogle: APIEnvironmentVariables?) {
-        self.apiVariablesTwitter = apiVariablesTwitter
-        self.apiVariablesGoogle = apiVariablesGoogle
-    }
 }
 
 class APIEnvironmentVariables: Codable {
@@ -25,15 +21,9 @@ class APIEnvironmentVariables: Codable {
     
     var baseURL: URL? {
         guard var domain = domain else { return nil }
-        if let unwrappedAPIVersion = apiVersion {
-            domain.append("/\(unwrappedAPIVersion)")
-        }
+//        if let unwrappedAPIVersion = apiVersion {
+//            domain.append("/\(unwrappedAPIVersion)")
+//        }
         return URL(string: domain)
-    }
-    
-    init(domain: String?, apiVersion: String?, apiKey: String?) {
-        self.domain = domain
-        self.apiVersion = apiVersion
-        self.apiKey = apiKey
     }
 }
