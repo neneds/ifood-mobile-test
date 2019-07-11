@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol ClassIdentifiable: class {
     static var reuseId: String { get }
 }

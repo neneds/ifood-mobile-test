@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class UserTweetCellViewModel: BaseViewModel {
     private var tweet: Tweet
     
@@ -30,6 +29,5 @@ class UserTweetCellViewModel: BaseViewModel {
     init(tweet: Tweet) {
         self.tweet = tweet
     }
-    
     
 }

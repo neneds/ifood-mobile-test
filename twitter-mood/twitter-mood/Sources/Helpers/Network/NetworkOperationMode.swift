@@ -11,7 +11,7 @@ import Foundation
 enum NetworkOperationMode {
     case normal
     case stubResponse
-    case stubWithDelay(delay : TimeInterval)
+    case stubWithDelay(delay: TimeInterval)
     case stubWithError(statusCode: Int?, data: Data?)
     
     static func fromString(type: String) -> NetworkOperationMode {

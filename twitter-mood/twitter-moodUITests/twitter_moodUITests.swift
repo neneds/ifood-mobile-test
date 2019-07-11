@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+//swiftlint:disable type_name
 class twitter_moodUITests: XCTestCase {
 
     override func setUp() {

@@ -42,7 +42,7 @@ extension GoogleProvider: TargetType {
         switch self {
         case .moodForTweet(let tweet):
             let contentDict = ["type": "PLAIN_TEXT", "content": tweet]
-            let parameters = ["encodingType": "UTF8", "document": contentDict] as [String : Any]
+            let parameters = ["encodingType": "UTF8", "document": contentDict] as [String: Any]
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
     }
@@ -51,7 +51,4 @@ extension GoogleProvider: TargetType {
         return ["Content-type": "application/json", "key": NetworkManager.shared.currentEnvVars?.apiVariablesGoogle?.apiKey ?? ""]
     }
 }
-
-
-
 

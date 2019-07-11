@@ -15,7 +15,6 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     private var navigationController: UINavigationController?
     private var userLookupViewModel: TwitterUserLookupViewModel?
     
-    
     override init(window: UIWindow?, parentCoordinator: BaseCoordinator?) {
         super.init(window: window, parentCoordinator: parentCoordinator)
         guard let window = window else {

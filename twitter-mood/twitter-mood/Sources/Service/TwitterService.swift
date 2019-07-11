@@ -44,6 +44,5 @@ final class TwitterService: BaseNetworkService<TwitterProvider>, TwitterServiceT
             })
     }
     
-    
 }
 

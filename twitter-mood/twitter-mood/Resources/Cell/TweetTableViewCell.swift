@@ -46,7 +46,6 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
         imageViewProfile.image = UIImage(named: "user-placeholder")
     }
     
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         resetToInitialStatus()

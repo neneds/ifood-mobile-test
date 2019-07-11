@@ -43,7 +43,6 @@ class BaseCoordinator: DependencyAndCoordinatable {
     
     var parentCoordinator: BaseCoordinator?
     
-    
     func start() {
         
     }
@@ -57,7 +56,7 @@ class BaseCoordinator: DependencyAndCoordinatable {
     }
 }
 
-extension BaseCoordinator  {
+extension BaseCoordinator {
     
     func coordinateTo(coordinator: CoordinatorType?) {
         guard let coordinator = coordinator else { return }

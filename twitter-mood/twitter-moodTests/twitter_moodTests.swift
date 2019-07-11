@@ -7,6 +7,7 @@
 //
 
 import XCTest
+//swiftlint:disable type_name
 @testable import twitter_mood
 
 class twitter_moodTests: XCTestCase {

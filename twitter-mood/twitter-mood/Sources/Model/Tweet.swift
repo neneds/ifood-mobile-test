@@ -15,7 +15,6 @@ class Tweet: Codable {
     var text: String?
     var user: User?
     
-    
     enum CodingKeys: String, CodingKey {
         case createdAt = "created_at"
         case id = "id"
@@ -39,7 +38,6 @@ struct User: Codable {
     var createdAt: String?
     var profileImageURLHTTPS: String?
     
-    
     enum CodingKeys: String, CodingKey {
         case id
         case idStr = "id_str"
@@ -54,7 +52,4 @@ struct User: Codable {
         case profileImageURLHTTPS = "profile_image_url_https"
     }
 }
-
-
-
 

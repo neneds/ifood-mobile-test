@@ -48,7 +48,7 @@ extension TwitterProvider: TargetType {
     var task: Task {
         switch self {
         case .fetchTweets(let username, let count):
-            let parameters = ["screen_name": username, "count": count] as [String : Any]
+            let parameters = ["screen_name": username, "count": count] as [String: Any]
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .authorize:
             let parameters = ["grant_type": "client_credentials"]
@@ -77,5 +77,4 @@ extension TwitterProvider: AccessTokenAuthorizable {
         }
     }
 }
-
 

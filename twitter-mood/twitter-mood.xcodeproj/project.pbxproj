@@ -605,6 +605,7 @@
 				E6311E0622D13AFE00E9F60D /* Frameworks */,
 				E6311E0722D13AFE00E9F60D /* Resources */,
 				FB9387816770B77395DEB4D9 /* [CP] Embed Pods Frameworks */,
+				E68EE3BF22D6DA3000F8D02C /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -798,6 +799,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-twitter-moodTests/Pods-twitter-moodTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E68EE3BF22D6DA3000F8D02C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		F9171F02E26C5D4AE2B20550 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

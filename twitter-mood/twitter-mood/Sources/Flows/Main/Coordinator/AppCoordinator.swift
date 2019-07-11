@@ -12,12 +12,10 @@ import RxSwift
 final class AppCoordinator: BaseCoordinator {
     private var window: UIWindow?
     
-    
     override init(window: UIWindow?, parentCoordinator: BaseCoordinator?) {
         super.init(window: window, parentCoordinator: parentCoordinator)
         self.window = window
     }
-    
     
     override func start() {
         startHomeFlow()

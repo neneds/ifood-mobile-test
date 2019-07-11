@@ -11,6 +11,7 @@ target 'twitter-mood' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
   pod 'KeychainAccess'
+  pod 'SwiftLint'
 
   target 'twitter-moodTests' do
     inherit! :search_paths

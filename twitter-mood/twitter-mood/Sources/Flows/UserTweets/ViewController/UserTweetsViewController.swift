@@ -38,7 +38,7 @@ class UserTweetsViewController: BaseViewController, BindableType {
         }).disposed(by: disposeBag)
         
         viewModel.userTweets
-            .bind(to: tableView.rx.items(cellIdentifier: TweetTableViewCell.typeName,cellType: TweetTableViewCell.self)) { [weak self] (_, element, cell) in
+            .bind(to: tableView.rx.items(cellIdentifier: TweetTableViewCell.typeName, cellType: TweetTableViewCell.self)) { [weak self] (_, element, cell) in
                 cell.viewModel = element
             }.disposed(by: disposeBag)
         
@@ -66,5 +66,4 @@ class UserTweetsViewController: BaseViewController, BindableType {
         tableView.rowHeight = TweetTableViewCell.cellSize
     }
 }
-
 
