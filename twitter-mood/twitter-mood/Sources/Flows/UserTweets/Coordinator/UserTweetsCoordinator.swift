@@ -24,7 +24,7 @@ class UserTweetsCoordinator: BaseCoordinator {
         userTweetsViewModel = UserTweetsViewModel(username: userName, twitterService: TwitterService())
         userTweetsViewController = UserTweetsViewController(viewModel: userTweetsViewModel as Any, nibName: UserTweetsViewController.typeName)
         
-        userTweetsViewController?.tweetDetailObservable.asObservable().filter({ $0 != nil }).subscribe(onNext: { [weak self] (cellViewModel) in
+        userTweetsViewController?.tweetDetailObservable.asObservable().subscribe(onNext: { [weak self] (cellViewModel) in
             self?.handleSeeTweetDetail(cellViewModel: cellViewModel)
         }).disposed(by: disposeBag)
         

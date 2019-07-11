@@ -9,6 +9,20 @@
 import Foundation
 import RxSwift
 
+//protocol TweetDetailViewModelOutput {
+//    var tweetCellViewModel: UserTweetCellViewModel { get }
+//    var googleService: GoogleService { get }
+//    var errorMessage: BehaviorSubject<String?> { get }
+//    var showLoader: BehaviorSubject<Bool> { get }
+//}
+//
+//protocol TweetDetailViewModelInput {
+//    var userName: BehaviorSubject<String?> { get }
+//    func findTweets()
+//}
+//
+//typealias TweetDetailViewModelType = TweetDetailViewModelInput & TweetDetailViewModelOutput
+
 class TweetDetailViewModel: BaseViewModel {
     
     private(set) var tweetCellViewModel: UserTweetCellViewModel

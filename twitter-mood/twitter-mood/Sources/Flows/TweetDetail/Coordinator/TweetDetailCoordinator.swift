@@ -26,6 +26,7 @@ class TweetDetailCoordinator: BaseCoordinator {
         tweetDetailViewController?.navigationControllerPopped.subscribe(onNext: { [weak self] (_) in
             self?.finalize()
         }).disposed(by: disposeBag)
+        
         router.showWithPresentationType(viewController: tweetDetailViewController, presentationType: presentationType)
     }
         

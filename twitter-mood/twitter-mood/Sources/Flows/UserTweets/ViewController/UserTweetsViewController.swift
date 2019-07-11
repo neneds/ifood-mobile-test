@@ -53,7 +53,6 @@ class UserTweetsViewController: BaseViewController, BindableType {
                 let okAction: AlertAction = (title: BaseLocalizable.okTitle, style:.default, handler:({ self?.dismiss(animated: true, completion: nil) }))
                 self?.showRequestErrorAlert(error, actions: [okAction])
             }).disposed(by: disposeBag)
-        
     }
     
     private func registerNibs() {

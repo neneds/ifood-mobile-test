@@ -43,12 +43,12 @@ extension GoogleProvider: TargetType {
         case .moodForTweet(let tweet):
             let contentDict = ["type": "PLAIN_TEXT", "content": tweet]
             let parameters = ["encodingType": "UTF8", "document": contentDict] as [String: Any]
-            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+            return .requestCompositeParameters(bodyParameters: parameters, bodyEncoding: JSONEncoding.default, urlParameters: ["key": NetworkManager.shared.currentEnvVars?.apiVariablesGoogle?.apiKey ?? ""])
         }
     }
     
     var headers: [String: String]? {
-        return ["Content-type": "application/json", "key": NetworkManager.shared.currentEnvVars?.apiVariablesGoogle?.apiKey ?? ""]
+        return ["Content-type": "application/json"]
     }
 }
 

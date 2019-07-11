@@ -25,6 +25,10 @@ class TweetDetailViewController: BaseViewController, BindableType {
         self.viewModel = viewModel
     }
     
+    override func setLocalizations() {
+        self.title = TweetDetailLocalizable.tweetDetail
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetViewState()
@@ -52,7 +56,7 @@ class TweetDetailViewController: BaseViewController, BindableType {
     private func resetViewState() {
         labelMoodName.text = ""
         labelMood.text = "🤔"
-        labelMoodTitle.text = "Mood"
+        labelMoodTitle.text = TweetDetailLocalizable.tweetMood
         viewMoodBg.backgroundColor = UIColor.clear
         textViewTweet.text = BaseLocalizable.emptyTitleDefault
     }
