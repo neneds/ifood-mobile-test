@@ -8,7 +8,16 @@
 
 import UIKit
 
-class TweetTableViewCell: UITableViewCell {
+class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
+    
+    internal var viewModel: UserTweetCellViewModel! {
+        didSet {
+            if viewModel != nil {
+                bindViewModel()
+            }
+        }
+    }
+    
     @IBOutlet private weak var labelName: UILabel!
     @IBOutlet private weak var imageViewProfile: UIImageView!
     @IBOutlet private weak var labelDate: UILabel!
@@ -16,13 +25,24 @@ class TweetTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        resetToInitialStatus()
     }
     
+    func bindViewModel() {
+        labelName.text = viewModel.tweetUserName
+        textViewTweet.text = viewModel.tweetContent
+    }
+    
+    private func resetToInitialStatus() {
+        labelName.text = "--"
+        labelDate.text = ""
+        textViewTweet.text = BaseLocalizable.emptyTitleDefault
+        imageViewProfile.image = UIImage(named: "user-placeholder")
+    }
+    
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        resetToInitialStatus()
+    }
 }

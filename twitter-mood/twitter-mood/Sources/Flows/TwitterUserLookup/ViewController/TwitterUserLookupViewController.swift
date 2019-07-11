@@ -51,7 +51,7 @@ class TwitterUserLookupViewController: BaseViewController, BindableType {
             .bind(to: viewModel.userNameInput)
             .disposed(by: disposeBag)
         
-        viewModel.isLoading.asObservable().subscribe(onNext: { [weak self] (isLoading) in
+        viewModel.isLoading.asDriver(onErrorJustReturn: false).drive(onNext: { [weak self] (isLoading) in
             isLoading ? self?.view.lockView() : self?.view.unlockView()
         }).disposed(by: disposeBag)
         

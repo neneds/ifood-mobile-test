@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TweetDetailViewController: UIViewController {
+class TweetDetailViewController: BaseViewController, BindableType {
 
     @IBOutlet private weak var labelMoodName: UILabel!
     @IBOutlet private weak var labelMood: UILabel!
@@ -16,10 +16,29 @@ class TweetDetailViewController: UIViewController {
     @IBOutlet private weak var labelMoodTitle: UILabel!
     @IBOutlet private weak var textViewTweet: UITextView!
     
+    internal var viewModel: TweetDetailViewModel!
+    
+    override func setViewModel(viewModel: Any) {
+        guard let viewModel = viewModel as? TweetDetailViewModel else {
+            fatalError("viewmodel of unexpected type")
+        }
+        self.viewModel = viewModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        resetViewState()
+    }
+    
+    func bindViewModel() {
+        
+    }
+    
+    private func resetViewState() {
+        labelMoodName.text = ""
+        labelMood.text = "🤔"
+        labelMoodTitle.text = "Mood"
+        viewMoodBg.backgroundColor = UIColor.clear
+        textViewTweet.text = BaseLocalizable.emptyTitleDefault
     }
 }
