@@ -28,10 +28,25 @@ class TweetDetailViewController: BaseViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetViewState()
+        bindViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.loadMoodFromTweet(viewModel.tweetCellViewModel.tweetContent)
     }
     
     func bindViewModel() {
+        viewModel.isLoading.asDriver(onErrorJustReturn: false).drive(onNext: { [weak self] (isLoading) in
+            isLoading ? self?.view.lockView() : self?.view.unlockView()
+        }).disposed(by: disposeBag)
         
+        viewModel.errorObservable.asObservable()
+            .filter({ $0 != nil })
+            .subscribe(onNext: { [weak self] (error) in
+                let okAction: AlertAction = (title: BaseLocalizable.okTitle, style:.default, handler:({ self?.dismiss(animated: true, completion: nil) }))
+                self?.showRequestErrorAlert(error, actions: [okAction])
+            }).disposed(by: disposeBag)
     }
     
     private func resetViewState() {

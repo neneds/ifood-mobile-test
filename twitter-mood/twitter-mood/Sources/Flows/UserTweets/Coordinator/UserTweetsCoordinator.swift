@@ -23,10 +23,24 @@ class UserTweetsCoordinator: BaseCoordinator {
     override func start(presentationType: PresentationType) {
         userTweetsViewModel = UserTweetsViewModel(username: userName, twitterService: TwitterService())
         userTweetsViewController = UserTweetsViewController(viewModel: userTweetsViewModel as Any, nibName: UserTweetsViewController.typeName)
+        
+        userTweetsViewController?.tweetDetailObservable.asObservable().filter({ $0 != nil }).subscribe(onNext: { [weak self] (cellViewModel) in
+            self?.handleSeeTweetDetail(cellViewModel: cellViewModel)
+        }).disposed(by: disposeBag)
+        
         userTweetsViewController?.navigationControllerPopped.subscribe(onNext: { [weak self] (_) in
             self?.finalize()
         }).disposed(by: disposeBag)
+        
         router.showWithPresentationType(viewController: userTweetsViewController, presentationType: presentationType)
+        
+    }
+    
+    private func handleSeeTweetDetail(cellViewModel: UserTweetCellViewModel?) {
+        guard let cellViewModel = cellViewModel else { return }
+        let tweetDetailCoordinator = TweetDetailCoordinator(tweetCellViewModel: cellViewModel, rootViewControler: router.rootController, parentCoordinator: self)
+        self.addDependency(coordinator: tweetDetailCoordinator)
+        tweetDetailCoordinator.start(presentationType: .push)
     }
     
     override func finalize() {

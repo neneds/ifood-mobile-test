@@ -40,6 +40,7 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     private func handleSeeUserTweets(username: String?) {
         guard let username = username else { return }
         let userTweetsCoordinator = UserTweetsCoordinator(username: username, rootViewControler: navigationController, parentCoordinator: self)
+        self.addDependency(coordinator: userTweetsCoordinator)
         userTweetsCoordinator.start(presentationType: .push)
     }
 }

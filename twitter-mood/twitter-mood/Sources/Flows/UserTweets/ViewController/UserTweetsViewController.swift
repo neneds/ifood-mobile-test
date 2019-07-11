@@ -13,6 +13,7 @@ class UserTweetsViewController: BaseViewController, BindableType {
     
     @IBOutlet private weak var tableView: UITableView!
     internal var viewModel: UserTweetsViewModel!
+    private(set) var tweetDetailObservable: BehaviorSubject = BehaviorSubject<UserTweetCellViewModel?>(value: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,19 @@ class UserTweetsViewController: BaseViewController, BindableType {
             .bind(to: tableView.rx.items(cellIdentifier: TweetTableViewCell.typeName,cellType: TweetTableViewCell.self)) { [weak self] (_, element, cell) in
                 cell.viewModel = element
             }.disposed(by: disposeBag)
+        
+        tableView
+            .rx.modelSelected(UserTweetCellViewModel.self)
+            .bind(to: tweetDetailObservable)
+            .disposed(by: disposeBag)
+        
+        viewModel.errorObservable.asObservable()
+            .filter({ $0 != nil })
+            .subscribe(onNext: { [weak self] (error) in
+                let okAction: AlertAction = (title: BaseLocalizable.okTitle, style:.default, handler:({ self?.dismiss(animated: true, completion: nil) }))
+                self?.showRequestErrorAlert(error, actions: [okAction])
+            }).disposed(by: disposeBag)
+        
     }
     
     private func registerNibs() {
@@ -47,15 +61,10 @@ class UserTweetsViewController: BaseViewController, BindableType {
     }
     
     private func setupTableView() {
-        tableView
-            .rx.setDelegate(self)
-            .disposed(by: disposeBag)
         tableView.tableFooterView = nil
         tableView.backgroundColor = UIColor.clear
         tableView.rowHeight = TweetTableViewCell.cellSize
     }
 }
 
-extension UserTweetsViewController: UITableViewDelegate {
-    
-}
+

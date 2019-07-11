@@ -9,7 +9,7 @@
 import Moya
 
 enum GoogleProvider {
-    case moodForTweet(_ tweet: Tweet)
+    case moodForTweet(_ tweet: String)
 }
 
 extension GoogleProvider: TargetType {
@@ -41,9 +41,9 @@ extension GoogleProvider: TargetType {
     var task: Task {
         switch self {
         case .moodForTweet(let tweet):
-            let contentDict = ["type": "PLAIN_TEXT", "content": tweet.text ?? ""]
+            let contentDict = ["type": "PLAIN_TEXT", "content": tweet]
             let parameters = ["encodingType": "UTF8", "document": contentDict] as [String : Any]
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
         }
     }
     

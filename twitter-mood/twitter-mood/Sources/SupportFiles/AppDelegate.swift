@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        NetworkManager.shared.isMoyaOnVerboseMode = true
         if window == nil {
             window = UIWindow(frame: UIScreen.main.bounds)
         }

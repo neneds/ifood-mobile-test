@@ -11,12 +11,12 @@ import RxSwift
 import Moya
 
 protocol GoogleServiceType {
-    func moodForTweet(_ tweet: Tweet?) -> Single<TweetMood>
+    func moodForTweet(_ tweet: String?) -> Single<TweetMood>
 }
 
 final class GoogleService: BaseNetworkService<GoogleProvider>, GoogleServiceType {
     
-    func moodForTweet(_ tweet: Tweet?) -> Single<TweetMood> {
+    func moodForTweet(_ tweet: String?) -> Single<TweetMood> {
         guard let tweet = tweet else { return Single.error(CustomError.nilParameter(parameter: "Tweet"))}
         return provider.rx
             .request(.moodForTweet(tweet))

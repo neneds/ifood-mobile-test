@@ -25,9 +25,9 @@ protocol RouterType {
 
 final class Router: RouterType {
     
-    private weak var rootController: UIViewController?
+    private(set) weak var rootController: UIViewController?
     /// Only have to be used in case we have a present of the rootController and then a push
-    private weak var navigationController: UINavigationController?
+    private(set) weak var navigationController: UINavigationController?
     
     init(rootController: UIViewController?) {
         guard let unwrappedRootController = rootController else { return }
