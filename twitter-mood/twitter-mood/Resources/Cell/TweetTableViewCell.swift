@@ -34,6 +34,9 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
     func bindViewModel() {
         labelName.text = viewModel.tweetUserName
         textViewTweet.text = viewModel.tweetContent
+        if let imgUserURL = viewModel.tweetUserImageURL {
+            imageViewProfile.loadImageFromURL(imgUserURL, placeholder: UIImage(named: "user-placeholder"), showActivityIndicator: true)
+        }
     }
     
     private func resetToInitialStatus() {
