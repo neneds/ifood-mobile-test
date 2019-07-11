@@ -18,6 +18,8 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
         }
     }
     
+    static let cellSize: CGFloat = 150
+    
     @IBOutlet private weak var labelName: UILabel!
     @IBOutlet private weak var imageViewProfile: UIImageView!
     @IBOutlet private weak var labelDate: UILabel!
@@ -25,6 +27,7 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
         resetToInitialStatus()
     }
     

@@ -12,9 +12,6 @@ import RxSwift
 class UserTweetsViewController: BaseViewController, BindableType {
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var labelUsername: UILabel!
-    @IBOutlet private weak var imageViewUser: UIImageView!
-    
     internal var viewModel: UserTweetsViewModel!
     
     override func viewDidLoad() {
@@ -55,6 +52,7 @@ class UserTweetsViewController: BaseViewController, BindableType {
             .disposed(by: disposeBag)
         tableView.tableFooterView = nil
         tableView.backgroundColor = UIColor.clear
+        tableView.rowHeight = TweetTableViewCell.cellSize
     }
 }
 
