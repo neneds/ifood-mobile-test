@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
-class TweetMoodViewModel: BaseViewModel {
-    private var tweetMood: TweetMood
+internal protocol TweetMoodViewModelInput {
+    var tweetMood: TweetMood { get }
+}
+
+class TweetMoodViewModel: BaseViewModel, TweetMoodViewModelInput {
+    
+    internal var tweetMood: TweetMood
     private var happyRange: ClosedRange<Double> = 0.25...1.0
     private var neutralRange: ClosedRange<Double> = -0.25...0.25
-    private var sadRange: ClosedRange<Double> = -1.0...0.25
+    private var sadRange: ClosedRange<Double> = -1.0 ... -0.25
     
     enum MoodState {
         case happy

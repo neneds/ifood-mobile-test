@@ -10,17 +10,37 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class TwitterUserLookupViewModel: BaseViewModel {
+internal protocol TwitterUserLookupViewModelOutput {
+    var userNameValidated: Driver<Bool> { get }
+    var twitterService: TwitterServiceType { get }
+    var isLoading: BehaviorSubject<Bool> { get }
+    var errorObservable: PublishSubject<Error?> { get }
+}
+
+internal protocol TwitterUserLookupViewModelInput {
+    var userNameInput: BehaviorSubject<String> { get }
+    func checkForAuthentication()
+}
+
+typealias TwitterUserLookupViewModelType = TwitterUserLookupViewModelOutput  & TwitterUserLookupViewModelInput
+
+class TwitterUserLookupViewModel: BaseViewModel, TwitterUserLookupViewModelType {
     
-    private var twitterService: TwitterServiceType
+    var twitterService: TwitterServiceType
     
-    let userNameValidated: Driver<Bool>
-    var userNameInput: BehaviorSubject = BehaviorSubject<String>(value: "")
-    private(set) var errorObservable = PublishSubject<Error?>()
-    private(set) var isLoading: BehaviorSubject = BehaviorSubject<Bool>(value: false)
+    var userNameInput: BehaviorSubject<String>
+    
+    var isLoading: BehaviorSubject<Bool>
+    
+    var errorObservable: PublishSubject<Error?>
+    
+    var userNameValidated: Driver<Bool>
     
     init(twitterService: TwitterServiceType) {
         self.twitterService = twitterService
+        self.userNameInput = BehaviorSubject<String>(value: "")
+        self.errorObservable = PublishSubject<Error?>()
+        self.isLoading = BehaviorSubject<Bool>(value: false)
         
         userNameValidated = userNameInput
             .debounce(0.15, scheduler: MainScheduler.instance)

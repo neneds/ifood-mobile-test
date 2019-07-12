@@ -9,17 +9,33 @@
 import Foundation
 import RxSwift
 
-class UserTweetsViewModel: BaseViewModel {
-    
-    private var twitterService: TwitterServiceType
-    private(set) var username: String
-    private(set) var isLoading: BehaviorSubject = BehaviorSubject<Bool>(value: false)
-    private(set) var errorObservable = PublishSubject<Error?>()
-    private(set) var userTweets: BehaviorSubject = BehaviorSubject<[UserTweetCellViewModel]>(value: [])
+internal protocol UserTweetsViewModelOutput {
+    var twitterService: TwitterServiceType { get }
+    var username: String { get }
+    var isLoading: BehaviorSubject<Bool> { get }
+    var errorObservable: PublishSubject<Error?> { get }
+    var userTweets: BehaviorSubject<[UserTweetCellViewModel]> { get }
+}
+
+internal protocol UserTweetsViewModelInput {
+    func loadUserTweets()
+}
+
+typealias UserTweetsViewModelType = UserTweetsViewModelOutput & UserTweetsViewModelInput
+
+class UserTweetsViewModel: BaseViewModel, UserTweetsViewModelType {
+    var twitterService: TwitterServiceType
+    var username: String
+    var isLoading: BehaviorSubject<Bool>
+    var errorObservable: PublishSubject<Error?>
+    var userTweets: BehaviorSubject<[UserTweetCellViewModel]>
     
     init(username: String, twitterService: TwitterServiceType) {
         self.username = username
         self.twitterService = twitterService
+        self.isLoading = BehaviorSubject<Bool>(value: false)
+        self.errorObservable = PublishSubject<Error?>()
+        self.userTweets = BehaviorSubject<[UserTweetCellViewModel]>(value: [])
     }
     
     func loadUserTweets() {

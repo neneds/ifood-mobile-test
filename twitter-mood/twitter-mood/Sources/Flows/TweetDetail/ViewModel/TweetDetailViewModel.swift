@@ -9,13 +9,31 @@
 import Foundation
 import RxSwift
 
-class TweetDetailViewModel: BaseViewModel {
+internal protocol TweetDetailViewModelOutput {
+    var tweetMood: BehaviorSubject<TweetMoodViewModel?> { get }
+    var isLoading: BehaviorSubject<Bool> { get }
+    var errorObservable: PublishSubject<Error?> { get }
+}
+
+internal protocol TweetDetailViewModelInput {
+    var tweetCellViewModel: UserTweetCellViewModel { get }
+    var googleService: GoogleService { get }
+    func loadMoodFromTweet()
+}
+
+typealias TweetDetailViewModelType = TweetDetailViewModelOutput  & TweetDetailViewModelInput
+
+class TweetDetailViewModel: BaseViewModel, TweetDetailViewModelType {
     
-    private(set) var tweetCellViewModel: UserTweetCellViewModel
-    private var googleService: GoogleService
-    private(set) var errorObservable = PublishSubject<Error?>()
-    private(set) var isLoading: BehaviorSubject = BehaviorSubject<Bool>(value: false)
-    private(set) var tweetMood: BehaviorSubject = BehaviorSubject<TweetMoodViewModel?>(value: nil)
+    var tweetMood: BehaviorSubject<TweetMoodViewModel?>
+    
+    var isLoading: BehaviorSubject<Bool>
+    
+    var errorObservable: PublishSubject<Error?>
+    
+    var tweetCellViewModel: UserTweetCellViewModel
+    
+    var googleService: GoogleService
     
     var tweetContent: String {
         return tweetCellViewModel.tweetContent
@@ -24,6 +42,9 @@ class TweetDetailViewModel: BaseViewModel {
     init(tweetCellViewModel: UserTweetCellViewModel, googleService: GoogleService) {
         self.tweetCellViewModel = tweetCellViewModel
         self.googleService = googleService
+        self.errorObservable = PublishSubject<Error?>()
+        self.isLoading = BehaviorSubject<Bool>(value: false)
+        self.tweetMood = BehaviorSubject<TweetMoodViewModel?>(value: nil)
     }
     
     func loadMoodFromTweet() {

@@ -8,8 +8,12 @@
 
 import Foundation
 
-class UserTweetCellViewModel: BaseViewModel {
-    private var tweet: Tweet
+internal protocol UserTweetCellViewModelInput {
+    var tweet: Tweet { get }
+}
+
+class UserTweetCellViewModel: BaseViewModel, UserTweetCellViewModelInput {
+    internal var tweet: Tweet
     
     var tweetContent: String {
         return tweet.text ?? BaseLocalizable.emptyTitleDefault
