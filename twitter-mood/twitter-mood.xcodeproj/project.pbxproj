@@ -20,7 +20,6 @@
 		E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3022D141C2005FCEC2 /* UIColor+Extensions.swift */; };
 		E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3222D14259005FCEC2 /* UIView+Extensions.swift */; };
 		E644BB3622D14367005FCEC2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644BB3522D14367005FCEC2 /* BaseCoordinator.swift */; };
-		E65369BC22D1838D009E75F1 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369BB22D1838D009E75F1 /* Tweet.swift */; };
 		E65369C122D1897B009E75F1 /* UserTweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369BF22D1897B009E75F1 /* UserTweetsViewController.swift */; };
 		E65369C222D1897B009E75F1 /* UserTweetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65369C022D1897B009E75F1 /* UserTweetsViewController.xib */; };
 		E65369C422D18F9C009E75F1 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369C322D18F9C009E75F1 /* TwitterService.swift */; };
@@ -28,13 +27,27 @@
 		E65369CA22D194AB009E75F1 /* NetworkOperationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369C922D194AB009E75F1 /* NetworkOperationMode.swift */; };
 		E65369CC22D195D4009E75F1 /* StubResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CB22D195D4009E75F1 /* StubResponseManager.swift */; };
 		E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369CD22D195FE009E75F1 /* ProjectUtils.swift */; };
-		E672563422D6A3E700F15C04 /* UserTweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E672563322D6A3E700F15C04 /* UserTweetCellViewModel.swift */; };
 		E672563622D6AA5000F15C04 /* TableView+IdentifierType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E672563522D6AA5000F15C04 /* TableView+IdentifierType.swift */; };
 		E672563822D6AA8400F15C04 /* Nib+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E672563722D6AA8400F15C04 /* Nib+Identifiable.swift */; };
 		E69780DA22D425350075A08C /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69780D822D425350075A08C /* TweetTableViewCell.swift */; };
 		E69780DB22D425350075A08C /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69780D922D425350075A08C /* TweetTableViewCell.xib */; };
 		E69DF0AC22D7FC3200BFE950 /* TweetDetailLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0AB22D7FC3200BFE950 /* TweetDetailLocalizable.swift */; };
 		E69DF0AE22D807E400BFE950 /* TweetMoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0AD22D807E400BFE950 /* TweetMoodViewModel.swift */; };
+		E69DF0B122D81D5100BFE950 /* twitter_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0B022D81D5100BFE950 /* twitter_response.json */; };
+		E69DF0B322D81D7400BFE950 /* TweetMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0B222D81D7400BFE950 /* TweetMock.swift */; };
+		E69DF0B422D81DB700BFE950 /* twitter_response.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0B022D81D5100BFE950 /* twitter_response.json */; };
+		E69DF0B522D81DEB00BFE950 /* TweetMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0B222D81D7400BFE950 /* TweetMock.swift */; };
+		E69DF0B822D81E8A00BFE950 /* UserTweetsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0B722D81E8A00BFE950 /* UserTweetsViewModelTests.swift */; };
+		E69DF0BB22D8236100BFE950 /* TwitterDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0BA22D8236100BFE950 /* TwitterDetailViewModelTests.swift */; };
+		E69DF0BD22D826F800BFE950 /* MoodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0BC22D826F800BFE950 /* MoodMock.swift */; };
+		E69DF0BE22D8275600BFE950 /* MoodMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0BC22D826F800BFE950 /* MoodMock.swift */; };
+		E69DF0C122D8276700BFE950 /* mood_neutral.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0BF22D8276700BFE950 /* mood_neutral.json */; };
+		E69DF0C222D8276700BFE950 /* mood_happy.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0C022D8276700BFE950 /* mood_happy.json */; };
+		E69DF0C322D8276B00BFE950 /* mood_happy.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0C022D8276700BFE950 /* mood_happy.json */; };
+		E69DF0C422D8276B00BFE950 /* mood_neutral.json in Resources */ = {isa = PBXBuildFile; fileRef = E69DF0BF22D8276700BFE950 /* mood_neutral.json */; };
+		E69DF0C722D82A0600BFE950 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65369BB22D1838D009E75F1 /* Tweet.swift */; };
+		E69DF0C822D82A2900BFE950 /* UserTweetCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E672563322D6A3E700F15C04 /* UserTweetCellViewModel.swift */; };
+		E69DF0CB22D82AFB00BFE950 /* TweetMoodViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0CA22D82AFB00BFE950 /* TweetMoodViewModelTests.swift */; };
 		E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */; };
 		E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */; };
 		E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */; };
@@ -129,6 +142,14 @@
 		E69780D922D425350075A08C /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		E69DF0AB22D7FC3200BFE950 /* TweetDetailLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailLocalizable.swift; sourceTree = "<group>"; };
 		E69DF0AD22D807E400BFE950 /* TweetMoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMoodViewModel.swift; sourceTree = "<group>"; };
+		E69DF0B022D81D5100BFE950 /* twitter_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = twitter_response.json; sourceTree = "<group>"; };
+		E69DF0B222D81D7400BFE950 /* TweetMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMock.swift; sourceTree = "<group>"; };
+		E69DF0B722D81E8A00BFE950 /* UserTweetsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTweetsViewModelTests.swift; sourceTree = "<group>"; };
+		E69DF0BA22D8236100BFE950 /* TwitterDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterDetailViewModelTests.swift; sourceTree = "<group>"; };
+		E69DF0BC22D826F800BFE950 /* MoodMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMock.swift; sourceTree = "<group>"; };
+		E69DF0BF22D8276700BFE950 /* mood_neutral.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mood_neutral.json; sourceTree = "<group>"; };
+		E69DF0C022D8276700BFE950 /* mood_happy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mood_happy.json; sourceTree = "<group>"; };
+		E69DF0CA22D82AFB00BFE950 /* TweetMoodViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMoodViewModelTests.swift; sourceTree = "<group>"; };
 		E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserLookupLocalizable.swift; sourceTree = "<group>"; };
 		E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetDetailViewController.xib; sourceTree = "<group>"; };
@@ -254,6 +275,10 @@
 		E6311E2022D13AFF00E9F60D /* twitter-moodTests */ = {
 			isa = PBXGroup;
 			children = (
+				E69DF0C922D82AAA00BFE950 /* TweetMoodViewModelTests */,
+				E69DF0B922D8234700BFE950 /* TwitterDetailViewModelTests */,
+				E69DF0B622D81E6700BFE950 /* TwitterViewModelTests */,
+				E69DF0AF22D81D3D00BFE950 /* Mocks */,
 				E6311E2122D13AFF00E9F60D /* twitter_moodTests.swift */,
 				E6311E2322D13AFF00E9F60D /* Info.plist */,
 			);
@@ -420,6 +445,42 @@
 				E69780D922D425350075A08C /* TweetTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E69DF0AF22D81D3D00BFE950 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E69DF0C022D8276700BFE950 /* mood_happy.json */,
+				E69DF0BF22D8276700BFE950 /* mood_neutral.json */,
+				E69DF0B022D81D5100BFE950 /* twitter_response.json */,
+				E69DF0B222D81D7400BFE950 /* TweetMock.swift */,
+				E69DF0BC22D826F800BFE950 /* MoodMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E69DF0B622D81E6700BFE950 /* TwitterViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E69DF0B722D81E8A00BFE950 /* UserTweetsViewModelTests.swift */,
+			);
+			path = TwitterViewModelTests;
+			sourceTree = "<group>";
+		};
+		E69DF0B922D8234700BFE950 /* TwitterDetailViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E69DF0BA22D8236100BFE950 /* TwitterDetailViewModelTests.swift */,
+			);
+			path = TwitterDetailViewModelTests;
+			sourceTree = "<group>";
+		};
+		E69DF0C922D82AAA00BFE950 /* TweetMoodViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				E69DF0CA22D82AFB00BFE950 /* TweetMoodViewModelTests.swift */,
+			);
+			path = TweetMoodViewModelTests;
 			sourceTree = "<group>";
 		};
 		E6BED3A522D27D9300F95BA6 /* Localizable */ = {
@@ -710,11 +771,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6FD5E0322D2763500193849 /* TwitterUserLookupViewController.xib in Resources */,
+				E69DF0C322D8276B00BFE950 /* mood_happy.json in Resources */,
 				E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */,
 				E69780DB22D425350075A08C /* TweetTableViewCell.xib in Resources */,
 				E6311E1722D13AFF00E9F60D /* LaunchScreen.storyboard in Resources */,
 				E6311E1422D13AFF00E9F60D /* Assets.xcassets in Resources */,
 				E6FD5DDF22D24D1100193849 /* Variables.plist in Resources */,
+				E69DF0B422D81DB700BFE950 /* twitter_response.json in Resources */,
+				E69DF0C422D8276B00BFE950 /* mood_neutral.json in Resources */,
 				E65369C222D1897B009E75F1 /* UserTweetsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,6 +787,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69DF0C122D8276700BFE950 /* mood_neutral.json in Resources */,
+				E69DF0C222D8276700BFE950 /* mood_happy.json in Resources */,
+				E69DF0B122D81D5100BFE950 /* twitter_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,9 +956,9 @@
 			files = (
 				E6CD4AAD22D5770B0004DA37 /* CustomNavigationController.swift in Sources */,
 				E6FD5E0622D2764500193849 /* TwitterUserLookupViewModel.swift in Sources */,
-				E672563422D6A3E700F15C04 /* UserTweetCellViewModel.swift in Sources */,
 				E638D1E822D17C4500F965EA /* TwitterProvider.swift in Sources */,
 				E6FD5DFE22D2760300193849 /* TwitterUserLookupCoordinator.swift in Sources */,
+				E69DF0B522D81DEB00BFE950 /* TweetMock.swift in Sources */,
 				E6CD4AAA22D571AA0004DA37 /* BindableType.swift in Sources */,
 				E65369C422D18F9C009E75F1 /* TwitterService.swift in Sources */,
 				E6EBE87222D149C9008EA586 /* BaseLocalizable.swift in Sources */,
@@ -919,18 +986,20 @@
 				E644BB2E22D13F50005FCEC2 /* UIKit.swift in Sources */,
 				E6CD4A9E22D560890004DA37 /* AccessTokenService.swift in Sources */,
 				E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */,
+				E69DF0C722D82A0600BFE950 /* Tweet.swift in Sources */,
 				E6CD4AB122D580010004DA37 /* Type+Extensions.swift in Sources */,
 				E6FD5DF322D2720600193849 /* UserTweetsViewModel.swift in Sources */,
 				E6CD4AA722D570D00004DA37 /* InputValidator.swift in Sources */,
 				E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */,
 				E6FD5DF622D2722500193849 /* UserTweetsCoordinator.swift in Sources */,
-				E65369BC22D1838D009E75F1 /* Tweet.swift in Sources */,
 				E6FD5DDB22D2404200193849 /* PlistLoader.swift in Sources */,
 				E644BB3122D141C2005FCEC2 /* UIColor+Extensions.swift in Sources */,
 				E6CD4AA522D5709B0004DA37 /* ValidationResult.swift in Sources */,
+				E69DF0BE22D8275600BFE950 /* MoodMock.swift in Sources */,
 				E6FD5DE522D26EC100193849 /* TweetMood.swift in Sources */,
 				E6EBE87622D14A71008EA586 /* BaseViewController.swift in Sources */,
 				E69DF0AC22D7FC3200BFE950 /* TweetDetailLocalizable.swift in Sources */,
+				E69DF0C822D82A2900BFE950 /* UserTweetCellViewModel.swift in Sources */,
 				E6CD4AA222D568D20004DA37 /* TwitterTokenResponse.swift in Sources */,
 				E644BB3322D14259005FCEC2 /* UIView+Extensions.swift in Sources */,
 				E65369C822D193C1009E75F1 /* NetworkManager.swift in Sources */,
@@ -947,6 +1016,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6311E2222D13AFF00E9F60D /* twitter_moodTests.swift in Sources */,
+				E69DF0BD22D826F800BFE950 /* MoodMock.swift in Sources */,
+				E69DF0B822D81E8A00BFE950 /* UserTweetsViewModelTests.swift in Sources */,
+				E69DF0CB22D82AFB00BFE950 /* TweetMoodViewModelTests.swift in Sources */,
+				E69DF0B322D81D7400BFE950 /* TweetMock.swift in Sources */,
+				E69DF0BB22D8236100BFE950 /* TwitterDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

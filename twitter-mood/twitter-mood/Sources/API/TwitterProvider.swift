@@ -44,7 +44,7 @@ extension TwitterProvider: TargetType {
     var sampleData: Data {
         switch self {
         case .fetchTweets(username: _, count: _):
-            return Data()
+            return TweetMock.loadTweetMock()
         case .authorize:
             return Data()
         }

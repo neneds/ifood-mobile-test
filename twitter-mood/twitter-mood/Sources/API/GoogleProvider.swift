@@ -34,7 +34,7 @@ extension GoogleProvider: TargetType {
     var sampleData: Data {
         switch self {
         case .moodForTweet(tweet: _):
-            return Data()
+            return MoodMock.loadMoodMockHappy()
         }
     }
     
