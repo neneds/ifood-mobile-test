@@ -21,14 +21,14 @@ PODS:
   - SwiftLint (0.33.0)
 
 DEPENDENCIES:
-  - KeychainAccess
-  - Moya/RxSwift
+  - KeychainAccess (= 3.2.0)
+  - Moya/RxSwift (= 13.0.1)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
   - SDWebImage (~> 5.0)
-  - SwiftLint
+  - SwiftLint (= 0.33.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -55,6 +55,6 @@ SPEC CHECKSUMS:
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: cccc45666cf801e631ef70ef7a86c6cae51f8f90
+PODFILE CHECKSUM: 425f67d8335aa26a07be5901ea4b041b89be46da
 
 COCOAPODS: 1.6.1

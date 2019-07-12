@@ -9,9 +9,9 @@
 import Foundation
 
 final class AccessTokenService {
-    private var keychainService: KeychainService
+    private var keychainService: KeychainServiceType
     
-    init(keychainService: KeychainService) {
+    init(keychainService: KeychainServiceType) {
         self.keychainService = keychainService
     }
     

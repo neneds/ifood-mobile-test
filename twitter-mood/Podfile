@@ -6,12 +6,12 @@ target 'twitter-mood' do
   use_frameworks!
 
   # Pods for twitter-mood
-  pod 'Moya/RxSwift'
+  pod 'Moya/RxSwift', '13.0.1'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
-  pod 'KeychainAccess'
-  pod 'SwiftLint'
+  pod 'KeychainAccess', '3.2.0'
+  pod 'SwiftLint', '0.33.0'
 
   target 'twitter-moodTests' do
     inherit! :search_paths

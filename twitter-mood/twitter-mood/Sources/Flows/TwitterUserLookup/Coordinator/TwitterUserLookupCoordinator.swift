@@ -24,7 +24,8 @@ class TwitterUserLookupCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        userLookupViewModel = TwitterUserLookupViewModel(twitterService: TwitterService())
+        let tokenService = AccessTokenService(keychainService: KeychainService(service: ProjectUtils.keychainGroupName()))
+        userLookupViewModel = TwitterUserLookupViewModel(twitterService: TwitterService(), tokenService: tokenService)
         userLookupViewController = TwitterUserLookupViewController(viewModel: userLookupViewModel as Any, nibName: TwitterUserLookupViewController.typeName)
         navigationController = CustomNavigationController(rootViewController: userLookupViewController)
         window.rootViewController = navigationController

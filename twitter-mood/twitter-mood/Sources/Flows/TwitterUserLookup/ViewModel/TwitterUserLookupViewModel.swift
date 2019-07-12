@@ -12,19 +12,21 @@ import RxCocoa
 
 internal protocol TwitterUserLookupViewModelOutput {
     var userNameValidated: Driver<Bool> { get }
-    var twitterService: TwitterServiceType { get }
     var isLoading: BehaviorSubject<Bool> { get }
     var errorObservable: PublishSubject<Error?> { get }
 }
 
 internal protocol TwitterUserLookupViewModelInput {
     var userNameInput: BehaviorSubject<String> { get }
+    var twitterService: TwitterServiceType { get }
+    var tokenService: AccessTokenService { get }
     func checkForAuthentication()
 }
 
 typealias TwitterUserLookupViewModelType = TwitterUserLookupViewModelOutput  & TwitterUserLookupViewModelInput
 
 class TwitterUserLookupViewModel: BaseViewModel, TwitterUserLookupViewModelType {
+    var tokenService: AccessTokenService
     
     var twitterService: TwitterServiceType
     
@@ -36,8 +38,9 @@ class TwitterUserLookupViewModel: BaseViewModel, TwitterUserLookupViewModelType 
     
     var userNameValidated: Driver<Bool>
     
-    init(twitterService: TwitterServiceType) {
+    init(twitterService: TwitterServiceType, tokenService: AccessTokenService) {
         self.twitterService = twitterService
+        self.tokenService = tokenService
         self.userNameInput = BehaviorSubject<String>(value: "")
         self.errorObservable = PublishSubject<Error?>()
         self.isLoading = BehaviorSubject<Bool>(value: false)
@@ -66,7 +69,6 @@ class TwitterUserLookupViewModel: BaseViewModel, TwitterUserLookupViewModelType 
     
     private func handleTwitterTokenStore(_ token: TwitterTokenResponse) {
         do {
-            let tokenService = AccessTokenService(keychainService: KeychainService(service: ProjectUtils.keychainGroupName()))
             let accessToken = AccessToken(tokenType: .other, accessToken: token.accessToken ?? "", scope: nil, refreshToken: nil)
             try tokenService.saveAccessToken(accessToken)
         } catch {
