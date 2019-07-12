@@ -15,9 +15,6 @@ protocol BaseViewControllerType {
     func setLocalizations()
 }
 
-/// To check if a viewController was popped by its navigation controller
-public typealias ViewControllerPopResult = (viewController: UIViewController?, isPopped: Bool)
-
 class BaseViewController: UIViewController, BaseViewControllerType {
     
     var disposeBag: DisposeBag = DisposeBag()

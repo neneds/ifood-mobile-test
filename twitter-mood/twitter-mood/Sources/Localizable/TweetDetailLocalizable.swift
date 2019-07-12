@@ -21,4 +21,5 @@ final class TweetDetailLocalizable: BaseLocalizable {
                                                      bundle: Bundle.main,
                                                      value: "Tweet Detail",
                                                      comment: "Tweet Detail title")
+    
 }

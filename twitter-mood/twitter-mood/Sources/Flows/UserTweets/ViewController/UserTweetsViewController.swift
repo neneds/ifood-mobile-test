@@ -27,7 +27,17 @@ class UserTweetsViewController: BaseViewController, BindableType {
             fatalError("viewmodel of unexpected type")
         }
         self.viewModel = viewModel
-        viewModel.loadUserTweets(username: viewModel.username)
+        viewModel.loadUserTweets()
+    }
+    
+    private func registerNibs() {
+        tableView.register(cellType: TweetTableViewCell.self)
+    }
+    
+    private func setupTableView() {
+        tableView.tableFooterView = nil
+        tableView.backgroundColor = UIColor.clear
+        tableView.rowHeight = TweetTableViewCell.cellSize
     }
     
     func bindViewModel() {
@@ -38,7 +48,7 @@ class UserTweetsViewController: BaseViewController, BindableType {
         }).disposed(by: disposeBag)
         
         viewModel.userTweets
-            .bind(to: tableView.rx.items(cellIdentifier: TweetTableViewCell.typeName, cellType: TweetTableViewCell.self)) { [weak self] (_, element, cell) in
+            .bind(to: tableView.rx.items(cellIdentifier: TweetTableViewCell.typeName, cellType: TweetTableViewCell.self)) { (_, element, cell) in
                 cell.viewModel = element
             }.disposed(by: disposeBag)
         
@@ -53,16 +63,6 @@ class UserTweetsViewController: BaseViewController, BindableType {
                 let okAction: AlertAction = (title: BaseLocalizable.okTitle, style:.default, handler:({ self?.dismiss(animated: true, completion: nil) }))
                 self?.showRequestErrorAlert(error, actions: [okAction])
             }).disposed(by: disposeBag)
-    }
-    
-    private func registerNibs() {
-        tableView.register(cellType: TweetTableViewCell.self)
-    }
-    
-    private func setupTableView() {
-        tableView.tableFooterView = nil
-        tableView.backgroundColor = UIColor.clear
-        tableView.rowHeight = TweetTableViewCell.cellSize
     }
 }
 

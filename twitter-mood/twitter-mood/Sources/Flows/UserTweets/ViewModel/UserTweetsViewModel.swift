@@ -22,16 +22,16 @@ class UserTweetsViewModel: BaseViewModel {
         self.twitterService = twitterService
     }
     
-    func loadUserTweets(username: String) {
+    func loadUserTweets() {
         isLoading.onNext(true)
         twitterService.fetchTweets(username: username, count: 10)
             .map({ $0.map({ UserTweetCellViewModel(tweet: $0)}) })
             .subscribe(onSuccess: { [weak self] (cellViewModels) in
                 self?.isLoading.onNext(false)
                 self?.userTweets.onNext(cellViewModels)
-            }) { (error) in
-             self.isLoading.onNext(false)
-             self.errorObservable.onNext(error)
-        }.disposed(by: disposeBag)
+            }, onError: { (error) in
+                self.isLoading.onNext(false)
+                self.errorObservable.onNext(error)
+            }).disposed(by: disposeBag)
     }
 }

@@ -15,7 +15,12 @@ enum TwitterProvider {
 
 extension TwitterProvider: TargetType {
     var baseURL: URL {
-        return NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.baseURL! ?? URL(string: "")!
+        switch self {
+        case .fetchTweets(username: _, count: _):
+            return NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.baseURL! ?? URL(string: "")!
+        case .authorize:
+            return NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.baseURLWithoutVersion! ?? URL(string: "")!
+        }
     }
     
     var path: String {
@@ -63,7 +68,6 @@ extension TwitterProvider: TargetType {
         case .authorize:
             return ["Content-type": "application/x-www-form-urlencoded;charset=UTF-8", "Authorization": "Basic \(NetworkManager.shared.currentEnvVars?.apiVariablesTwitter?.apiKey ?? "")"]
         }
-     
     }
 }
 

@@ -23,7 +23,7 @@ class TwitterUserLookupViewModel: BaseViewModel {
         self.twitterService = twitterService
         
         userNameValidated = userNameInput
-            .debounce(0.3, scheduler: MainScheduler.instance)
+            .debounce(0.15, scheduler: MainScheduler.instance)
             .map({ (name) -> Bool in
                 return InputValidator.validateName(name, minCharacters: 2).isValid
             }).asDriver(onErrorJustReturn: false)
@@ -32,15 +32,15 @@ class TwitterUserLookupViewModel: BaseViewModel {
     func checkForAuthentication() {
         if NetworkManager.shared.twitterAuthToken() == nil {
             isLoading.onNext(true)
-            let result = twitterService.authorize()
-            result.subscribe(onSuccess: { [weak self] (token) in
-                self?.isLoading.onNext(false)
-                self?.handleTwitterTokenStore(token)
-            }) { (error) in
-                self.isLoading.onNext(false)
-                self.errorObservable.onNext(error)
-                print("error on request twitter auth token: \(error)")
-            }
+            twitterService.authorize()
+                .subscribe(onSuccess: { [weak self] (token) in
+                    self?.isLoading.onNext(false)
+                    self?.handleTwitterTokenStore(token)
+                 }, onError: { (error) in
+                    self.isLoading.onNext(false)
+                    self.errorObservable.onNext(error)
+                    print("error on request twitter auth token: \(error)")
+                }).disposed(by: disposeBag)
         }
     }
     

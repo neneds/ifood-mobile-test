@@ -34,6 +34,7 @@
 		E69780DA22D425350075A08C /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69780D822D425350075A08C /* TweetTableViewCell.swift */; };
 		E69780DB22D425350075A08C /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69780D922D425350075A08C /* TweetTableViewCell.xib */; };
 		E69DF0AC22D7FC3200BFE950 /* TweetDetailLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0AB22D7FC3200BFE950 /* TweetDetailLocalizable.swift */; };
+		E69DF0AE22D807E400BFE950 /* TweetMoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69DF0AD22D807E400BFE950 /* TweetMoodViewModel.swift */; };
 		E6BED3A722D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */; };
 		E6BED3AA22D2CB9500F95BA6 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */; };
 		E6BED3AB22D2CB9500F95BA6 /* TweetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */; };
@@ -127,6 +128,7 @@
 		E69780D822D425350075A08C /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		E69780D922D425350075A08C /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
 		E69DF0AB22D7FC3200BFE950 /* TweetDetailLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailLocalizable.swift; sourceTree = "<group>"; };
+		E69DF0AD22D807E400BFE950 /* TweetMoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMoodViewModel.swift; sourceTree = "<group>"; };
 		E6BED3A622D27DA500F95BA6 /* TwitterUserLookupLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterUserLookupLocalizable.swift; sourceTree = "<group>"; };
 		E6BED3A822D2CB9500F95BA6 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		E6BED3A922D2CB9500F95BA6 /* TweetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetDetailViewController.xib; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				E6FD5DE922D2713E00193849 /* TweetDetailViewModel.swift */,
+				E69DF0AD22D807E400BFE950 /* TweetMoodViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				E65369CE22D195FE009E75F1 /* ProjectUtils.swift in Sources */,
 				E6FD5DFA22D2737700193849 /* AppCoordinator.swift in Sources */,
 				E6DDFD7E22D6D6EB003F9D9B /* UIImageView+Extensions.swift in Sources */,
+				E69DF0AE22D807E400BFE950 /* TweetMoodViewModel.swift in Sources */,
 				E6EBE87922D14B15008EA586 /* BaseViewModel.swift in Sources */,
 				E6FD5DDD22D241FA00193849 /* EnvironmentVariables.swift in Sources */,
 				E672563622D6AA5000F15C04 /* TableView+IdentifierType.swift in Sources */,

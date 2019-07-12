@@ -16,6 +16,12 @@ struct UIKit {
     static var grey323232: UIColor { return UIColor.fromHex(0x323232) }
     ///#1B1B1B
     static var grey1B1B1B: UIColor { return UIColor.fromHex(0x1B1B1B) }
+    ///#CECECE
+    static var greyCECECE: UIColor { return UIColor.fromHex(0xCECECE) }
+    ///#F5CE42
+    static var yellowF5CE42: UIColor { return UIColor.fromHex(0xF5CE42) }
+    ///#42A7F5
+    static var blue42A7F5: UIColor { return UIColor.fromHex(0x42A7F5) }
 
     // MARK: Fonts Styles
     static var smallText1: UIFont {

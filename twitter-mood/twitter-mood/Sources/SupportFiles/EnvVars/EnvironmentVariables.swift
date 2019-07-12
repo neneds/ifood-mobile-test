@@ -26,4 +26,9 @@ class APIEnvironmentVariables: Codable {
         }
         return URL(string: domain)
     }
+    
+    var baseURLWithoutVersion: URL? {
+        guard let domain = domain else { return nil }
+        return URL(string: domain)
+    }
 }
