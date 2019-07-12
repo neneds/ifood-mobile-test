@@ -23,7 +23,7 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
     @IBOutlet private weak var labelName: UILabel!
     @IBOutlet private weak var imageViewProfile: UIImageView!
     @IBOutlet private weak var labelDate: UILabel!
-    @IBOutlet private weak var textViewTweet: UITextView!
+    @IBOutlet weak var labelTweetText: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +33,7 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
     
     func bindViewModel() {
         labelName.text = viewModel.tweetUserName
-        textViewTweet.text = viewModel.tweetContent
+        labelTweetText.text = viewModel.tweetContent
         if let imgUserURL = viewModel.tweetUserImageURL {
             imageViewProfile.loadImageFromURL(imgUserURL, placeholder: UIImage(named: "user-placeholder"), showActivityIndicator: true)
         }
@@ -42,7 +42,7 @@ class TweetTableViewCell: UITableViewCell, CellIdentifiable, BindableType {
     private func resetToInitialStatus() {
         labelName.text = "--"
         labelDate.text = ""
-        textViewTweet.text = BaseLocalizable.emptyTitleDefault
+        labelTweetText.text = BaseLocalizable.emptyTitleDefault
         imageViewProfile.image = UIImage(named: "user-placeholder")
     }
     

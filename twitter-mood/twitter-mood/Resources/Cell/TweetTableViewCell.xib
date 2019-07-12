@@ -45,25 +45,23 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXU-My-Tzo">
-                        <rect key="frame" x="10" y="60" width="300" height="157"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlY-UC-fte">
+                        <rect key="frame" x="16" y="64" width="288" height="153"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" name="grey1B1B1B"/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hlY-UC-fte" secondAttribute="trailing" constant="16" id="KxJ-6k-u9w"/>
+                    <constraint firstItem="hlY-UC-fte" firstAttribute="top" secondItem="cbh-44-zzf" secondAttribute="bottom" constant="10" id="MkL-QH-az9"/>
                     <constraint firstItem="cbh-44-zzf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Nay-Em-6op"/>
                     <constraint firstItem="s0A-b7-bTC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="OPg-2a-NrV"/>
+                    <constraint firstItem="hlY-UC-fte" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="S50-we-eOC"/>
                     <constraint firstItem="cbh-44-zzf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bLU-OJ-cIr"/>
-                    <constraint firstItem="cXU-My-Tzo" firstAttribute="top" secondItem="cbh-44-zzf" secondAttribute="bottom" constant="6" id="d08-Uc-bXr"/>
-                    <constraint firstItem="cXU-My-Tzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gFa-ZY-0X2"/>
+                    <constraint firstAttribute="bottom" secondItem="hlY-UC-fte" secondAttribute="bottom" constant="32.5" id="bks-Aj-9R7"/>
                     <constraint firstAttribute="bottom" secondItem="s0A-b7-bTC" secondAttribute="bottom" constant="10" id="quX-vO-hav"/>
-                    <constraint firstAttribute="trailing" secondItem="cXU-My-Tzo" secondAttribute="trailing" constant="10" id="trT-OQ-Iet"/>
-                    <constraint firstItem="s0A-b7-bTC" firstAttribute="top" secondItem="cXU-My-Tzo" secondAttribute="bottom" constant="8" id="zRq-IU-dug"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -71,7 +69,7 @@
                 <outlet property="imageViewProfile" destination="sD0-Xo-Nhv" id="I1W-ec-7ud"/>
                 <outlet property="labelDate" destination="s0A-b7-bTC" id="RFN-rC-hZh"/>
                 <outlet property="labelName" destination="jcB-qT-7ic" id="ffe-q1-Hxv"/>
-                <outlet property="textViewTweet" destination="cXU-My-Tzo" id="dpg-1b-C8G"/>
+                <outlet property="labelTweetText" destination="hlY-UC-fte" id="tN7-yL-Tgv"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="222.32142857142856"/>
         </tableViewCell>

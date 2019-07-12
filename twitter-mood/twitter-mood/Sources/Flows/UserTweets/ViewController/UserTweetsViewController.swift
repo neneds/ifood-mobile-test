@@ -54,9 +54,8 @@ class UserTweetsViewController: BaseViewController, BindableType {
         
         tableView
             .rx.modelSelected(UserTweetCellViewModel.self)
-            .subscribe(onNext: { [weak self] (cellViewModel) in
-                self?.tweetDetailObservable.onNext(cellViewModel)
-            }).disposed(by: disposeBag)
+            .bind(to: tweetDetailObservable)
+            .disposed(by: disposeBag)
         
         viewModel.errorObservable.asObservable()
             .filter({ $0 != nil })
